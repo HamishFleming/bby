@@ -1,0 +1,16 @@
+
+
+
+@font-face {
+    font-family: 'youngserif';
+    src:url('youngserif-regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'youngserif';
+    src:url('youngserif-regular.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+}

@@ -1,0 +1,66 @@
+version: '3'
+services:
+  wordpress:
+    depends_on:
+      - mariadb
+      - memcached
+    image: docker.io/bitpoke/wordpress-runtime:bedrock
+    volumes:
+      - ./website/bedrock:/app
+      # - ./website/bedrock/web/app/uploads:/app/web/app/uploads:rw
+    ports:
+      - "8088:8080"
+    environment:
+      DB_HOST: mariadb:3306
+      DB_USER: root
+      DB_PASSWORD: mariadb
+      DB_NAME: mariadb
+      MEMCACHED_HOST: memcached:11211
+      WP_HOME: http://localhost:8088
+      WP_SITEURL: http://localhost:8088/wp
+      WP_ENV: development
+
+  memcached:
+    image: memcached:1.5
+
+  nginx:
+    build: ./nginx
+    volumes:
+      - ./website/bedrock:/var/www/html
+    ports:
+      - '8880:80'
+    depends_on:
+      - php
+      - mariadb
+  php:
+    build: ./website
+    env_file: ./website/env/.env.dev
+    volumes:
+      - ./website/bedrock:/var/www/html
+  mariadb:
+    image: mariadb
+    restart: always
+    environment:
+      MARIADB_ROOT_PASSWORD: mariadb
+      MARIADB_DATABASE: mariadb
+      MARIADB_USER: mariadb
+    volumes:
+      - ./data:/var/lib/mysql
+    ports:
+      - 3306:3306
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8000:8080
+    depends_on:
+      - mariadb
+  mailhog:
+   image: mailhog/mailhog:latest
+   ports:
+     - 8787:8025 # gui
+     - 1025:1025 # smtp server
+
+volumes:
+  uploads:
+  upgrade:

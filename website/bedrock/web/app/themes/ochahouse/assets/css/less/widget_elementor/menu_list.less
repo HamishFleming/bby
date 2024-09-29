@@ -1,0 +1,105 @@
+.jws-menu-list {
+        &.box-border{
+    &::before{
+        content: '';
+    width: 95%;
+    height: 95%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    border: 1px solid #fff;
+}
+}
+   ul {
+        list-style-type: none;
+   } 
+  .elementor-icon-list-icon  {
+        border-radius: 100%;
+    i , svg {
+         width: 1.25em;
+        height: 1.25em;
+        display: block;
+        line-height: 1.25em;
+        text-align: center;      
+    }
+   
+  }  
+  .line_sm {
+    li {
+       a {
+        display:unset;
+        .elementor-icon-list-text {
+            width: auto;
+            background-repeat: no-repeat;
+            background-image: -o-linear-gradient(transparent calc(100% - 1.5px),currentColor 1.5px);
+            background-image: linear-gradient(transparent calc(100% - 1.5px),currentColor 1.5px);
+            background-image: -ms-linear-gradient(transparent 95%,currentColor 1.5px);
+            -webkit-transitionq: .6s cubic-bezier(.215,.61,.355,1);
+            -o-transition: .6s cubic-bezier(.215,.61,.355,1);
+            transition: .6s cubic-bezier(.215,.61,.355,1);
+            background-size: 0 96%;
+   
+       }
+       } 
+       &:focus , &:hover , &.active {
+            a .elementor-icon-list-text {
+                background-size: 100% 96%;
+            
+            }
+       }
+    }
+  }  
+  .line_pd {
+    li {
+        transition: 0.3s all;
+         .elementor-icon-list-text {
+           position:relative; 
+           width: auto;
+            &:before {
+                background:var(--main);
+                content:"";
+                bottom: 15%;
+               right:0;
+                transition: 0.3s all;
+                position: absolute;
+                height:10px;
+                width: 0%;
+                transition: 0.3s all;
+           } 
+           span {
+            position: relative;
+            z-index: 1;
+           }
+          
+        }
+        &:focus , &:hover , &.active {
+            transform: translateX(10px);
+            -webkit-transform: translateX(10px);
+           .elementor-icon-list-text  {
+            padding: 0 3px;
+                &:before {
+                   width: 100%;
+                    left: 0;
+                }
+           } 
+        }
+    }
+  }  
+}
+@media(max-width:767px) {
+    .jws-menu-list.toggle-mobile {
+        h3 {
+            cursor: pointer;
+            &:after {
+                font-family: "jws_icon";
+                content: '\e82a';
+                margin-left: 5px;
+                font-size: 18px;
+            }
+        }
+        ul {
+            display:none;
+        }
+    } 
+}

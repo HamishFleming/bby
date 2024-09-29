@@ -1,0 +1,45 @@
+@charset "UTF-8";
+/*
+Theme Name: OchaHouse
+Theme URI: https://ochahouse.gavencreative.com
+Author: the JWSThemes team
+Author URI: https://jwsuperthemes.com
+Description: OchaHouse Store Elementor WordPress theme is the ultimate choice for getting started with a website presenting services and products of a tea shop, cafe, tea online business services, etc. A bright and bold design of the theme makes it look outstanding. Due to the theme’s compatibility with the Elementor and WooCommere intergated, you can easily adjust the ready-made pages to match the needs of a range of other topic-specific websites, including tea ceremony blogs, tea master agencies, herbal tea presentation companies, tea workshops, and tea events firms. 
+Requires at least: WordPress 4.9.6
+Version: 2.2.8
+License: GNU General Public License v3 or later
+License URI: https://www.gnu.org/licenses/lgpl-3.0.en.html
+Text Domain: ochahouse
+Tags: one-column, flexible-header, accessibility-ready, custom-colors, custom-menu, custom-logo, editor-style, featured-images, footer-widgets, rtl-language-support, sticky-post, threaded-comments, translation-ready
+*/
+
+:root {
+  --main: #2e524a;
+  --secondary: #fda043;
+  --accent: #bac9ac;
+  --accent_second: #ebdbcb;
+  --light: #ffffff;
+  --dark: #000000;
+  --heading: #2e524a;
+  --body: #363636;
+  --bodybg: #ffffff;
+  --btn-color: #ffffff;
+  --btn-color2: #ffffff;
+  --btn-bgcolor: #fda043;
+  --btn-bgcolor2: #2e524a;
+  --e-global-color-primary: #2e524a;
+  --e-global-color-secondary: #040202;
+  --menu-color: #040202;
+}
+.btn-theme {
+  background: var(--main);
+  color: #ffffff;
+  height: 50px;
+  padding: 0 40px;
+  text-align: center;
+  line-height: 50px;
+}
+
+button.btn-theme {
+  border: 0;
+}

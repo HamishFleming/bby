@@ -1,0 +1,89 @@
+.wpcf7-list-item{
+  
+    margin: 0 1em 0 0;  
+}
+span[for="check_box"] {
+    font-weight: 500;
+}
+.button-default {
+   .btn-main , .jws-cf7-style .wpcf7-submit {
+        text-transform: uppercase;
+        background:var(--btn-bgcolor2);
+        color:var(--btn-color);
+        border:0;
+        padding-top: 16px;
+        padding-right: 35px;
+        padding-bottom: 16px;
+        padding-left: 35px;
+        font-weight: 700;
+        letter-spacing: 1px;
+        font-size:14px;
+      &:hover {
+        background:var(--btn-bgcolor);
+        color:var(--btn-color);
+      } 
+   }
+}
+
+.button-with_border {
+  .btn-main , .jws-cf7-style .wpcf7-submit {
+      padding: 0 !important;
+     background: var(--secondary); 
+      > span {
+        border: 1px solid #040202;
+        min-width: 160px;
+        padding: 11px 30px;
+        position: relative;
+        transform: translate(12px, -12px);
+        transition: 0.3s all;
+      } 
+      &:hover {
+        > span {
+            border-color: transparent;
+            transform: none;   
+        }
+        background:var(--btn-bgcolor2);
+        color:var(--btn-color2);
+      } 
+   }  
+}
+.wpcf7-list-item-label{
+    font-weight: 500;
+    &::before{
+        cursor: pointer;
+     position:absolute;
+     left:0;
+    }
+}
+.jws-cf7-check-yes .wpcf7-acceptance input[type="checkbox"]:checked + span:before{
+   content: "\F33E";
+   font-family: 'jws_icon';
+   
+}
+.wpcf7-list-item > label {
+    display: flex;
+    .wpcf7-list-item-label{ 
+       margin-left:18px;
+        }
+    }
+
+
+.elementor-button {
+    border-radius:0;
+    position: relative;
+    font-style: normal;
+font-weight: 700;
+font-size: 14px;
+line-height: 22px;
+/* identical to box height, or 160% */
+
+letter-spacing: 0.1em;
+text-transform: uppercase;
+}
+.elementor-button-content-wrapper {
+      align-items: center;
+}
+
+.jws-button a#custom-buttonbr {
+    overflow: hidden;
+}

@@ -1,0 +1,119 @@
+.jws_team {
+    &.layout1 {
+        .jws_team_inner {
+            .jws_team_content {
+              .team_title {
+                margin-bottom: 3px;
+                margin-top: 18px;
+                a:hover {
+                     color:var(--main);
+                }
+              }  
+              .team_job {
+                   font-size: 14px;
+                    color: var(--third);
+              }  
+            }
+            .jws_team_image {
+                position:relative;
+                overflow: hidden;
+                img {
+                   transition: 0.7s all;
+                }
+                .team_icon {
+                    position: absolute;
+                    top: 12px;
+                    left: 13px;
+                    background: rgba(4, 2, 2, 0.25);
+                    padding: 4px 0;
+                    transform: translatex(-100%);
+                    opacity: 0;
+                    transition: 0.7s all;
+                    li {
+                        display: block;
+                        text-align: center;
+                        a {
+                           color: var(--light);
+                            font-size: 14px;
+                            padding: 5px 7px;
+                            display: block;
+                            &:hover {
+                              color:var(--main);
+                               
+                            }
+                        }
+                    }
+                }
+            }
+            &:hover {
+                .jws_team_image {
+                    .team_icon {
+                      transform: translatex(0);
+                      opacity:1;  
+                    }
+                    img {
+                        transform: scale(1.15);
+                    }
+                } 
+            }
+        }
+    }
+      &.layout2 {
+        .jws_team_inner {
+            .jws_team_image{
+                text-align:center;
+                img{
+                    transition: .3s ease;
+                    -webkit-mask-image: url('../assets/image/blob.png');
+                    mask-image: url('../assets/image/blob.png');
+                    -webkit-mask-size: 100%;
+                    mask-size: 100%;
+                    -webkit-mask-repeat: no-repeat;
+                    mask-repeat: no-repeat;
+                    -webkit-mask-size: contain;
+                    &:hover{
+                   	    transform: scale(0.9);
+                    }
+                }
+        }
+
+   
+            
+            .jws_team_content {
+                margin-top:27px;
+                 text-align: center;
+                .team_title{
+                    margin:12px 0px;
+                    a{
+                         &:hover{
+                            color:var(--secondary);
+                           } 
+                    }
+                }
+                .team_job{
+                    font-size: 14px;
+                    line-height: 20px;
+                       opacity: 0.6;
+                    letter-spacing: 0.1em;
+                    text-transform: uppercase;
+                }
+                ul.team_icon{
+                    display:block;
+                    >li{
+                        display:inline-block;
+                        a{
+                           margin-left:3px;
+                           margin-right:3px;
+                           font-size:16px;  
+                           &:hover{
+                            color:var(--secondary);
+                           } 
+                        }
+                    }
+                }
+                
+            }
+        }
+        
+      }
+}
